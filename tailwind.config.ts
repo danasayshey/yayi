@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,20 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+                // YAYI system cabinet website colors
+                yayi: {
+                    brown: '#817473',
+                    gray: '#ADA5A5',
+                    green: '#C4DDB1',
+                    gold: '#DEAB6F',
+                    beige: '#EFD5B7',
+                    white: '#FFFEFF',
+                }
+			},
+			fontFamily: {
+				sans: ['Inter', 'sans-serif'],
+				noto: ['"Noto Sans TC"', 'sans-serif'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
