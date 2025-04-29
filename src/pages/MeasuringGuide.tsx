@@ -94,7 +94,7 @@ const MeasuringGuide = () => {
                   <li>牆角是否為直角</li>
                 </ul>
               </div>
-          
+          </div>
           </section>          
           <div className="mt-12 bg-yayi-brown p-6 rounded-lg text-white">
             <p className="mb-4">歡迎加入我們的 LINE 官方帳號了解更多</p>
