@@ -80,7 +80,7 @@ export function Navbar() {
               variant="default"
               className="bg-yayi-gold hover:bg-opacity-80 text-white ml-4"
               onClick={() =>
-                window.open("https://line.me/R/ti/p/@123abcde", "_blank")
+                window.open("https://line.me/R/ti/p/@YAYI", "_blank")
               }
             >
               LINE下單
@@ -128,7 +128,7 @@ export function Navbar() {
             variant="default"
             className="bg-yayi-gold hover:bg-opacity-80 text-white mt-4 w-full"
             onClick={() => {
-              window.open("https://line.me/R/ti/p/@123abcde", "_blank");
+              window.open("https://line.me/R/ti/p/@YAYI", "_blank");
               closeMenu();
             }}
           >
