@@ -32,8 +32,8 @@ const featuredProducts: Product[] = [
 
 const features = [
   {
-    title: "客製化設計",
-    description: "根據您的空間和需求，打造完美契合的收納系統。",
+    title: "半客製化",
+    description: "根據您的空間和需求，推薦完美契合的收納系統。",
     icon: "✓",
   },
   {
@@ -47,8 +47,8 @@ const features = [
     icon: "✓",
   },
   {
-    title: "五年保固",
-    description: "提供五年保固服務，讓您安心使用。",
+    title: "一年保固",
+    description: "提供五金板材一年保固，讓您安心使用。",
     icon: "✓",
   },
 ];
@@ -160,10 +160,10 @@ const Index = () => {
             </Button>
             <Button
               variant="outline"
-              className="border-white text-white hover:bg-white hover:text-yayi-brown"
+              className="border-white text-yayi-gold hover:bg-white hover:text-yayi-brown"
               size="lg"
               onClick={() =>
-                window.open("https://line.me/R/ti/p/@123abcde", "_blank")
+                window.open("https://line.me/R/ti/p/@YAYI", "_blank")
               }
             >
               LINE下單
