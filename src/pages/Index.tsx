@@ -62,7 +62,7 @@ const Index = () => {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              "url('https://images.unsplash.com/photo-1631679706909-1844bbd07221?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80')",
+              "url('" + import.meta.env.BASE_URL + "images/hero.jpg')",
           }}
         >
           <div className="absolute inset-0 bg-yayi-brown bg-opacity-30"></div>
