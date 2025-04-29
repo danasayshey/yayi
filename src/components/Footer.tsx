@@ -9,9 +9,9 @@ export function Footer() {
           <div>
             <h3 className="text-xl font-medium mb-4 text-yayi-beige">聯絡資訊</h3>
             <ul className="space-y-2">
-              <li>電話：(02) 1234-5678</li>
-              <li>信箱：info@yayi-cabinet.com</li>
-              <li>地址：台北市松山區某某路123號</li>
+              <li>電話：(03)2870572</li>
+              <li>信箱：xitong778868@gmail.com</li>
+              <li>地址：桃園市中壢區青心路30號</li>
             </ul>
           </div>
           <div>
