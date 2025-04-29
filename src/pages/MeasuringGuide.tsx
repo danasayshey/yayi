@@ -93,52 +93,11 @@ const MeasuringGuide = () => {
                   <li>地板是否水平</li>
                   <li>牆角是否為直角</li>
                 </ul>
-                <p className="mt-2">這些資訊對於安裝調整非常重要，特別是在舊房子中。</p>
               </div>
-            </div>
-          </section>
           
-          <section className="mb-12">
-            <h2 className="text-2xl font-semibold mb-4 text-yayi-brown">測量圖示範</h2>
-            <div className="bg-white p-6 border border-yayi-beige rounded-lg mb-6">
-              <img 
-                src="https://images.unsplash.com/photo-1613665813446-82a78c468a1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" 
-                alt="測量圖示範" 
-                className="w-full h-auto rounded-lg"
-              />
-              <p className="text-center mt-3 text-sm text-gray-600">測量示意圖（請記錄所有關鍵尺寸）</p>
-            </div>
-          </section>
-          
-          <section>
-            <h2 className="text-2xl font-semibold mb-4 text-yayi-brown">常見問題</h2>
-            
-            <div className="space-y-6">
-              <div>
-                <h3 className="text-lg font-medium text-yayi-brown">Q: 我需要測量多少次來確保準確性？</h3>
-                <p>A: 建議測量至少兩次，以確保數據準確。如果兩次測量結果有差異，進行第三次測量。</p>
-              </div>
-              
-              <div>
-                <h3 className="text-lg font-medium text-yayi-brown">Q: 如果我的牆面不平或地板不水平怎麼辦？</h3>
-                <p>A: 這是常見情況，請記錄最大的偏差值。我們的安裝團隊會使用專業工具和調整方法來解決這些問題。</p>
-              </div>
-              
-              <div>
-                <h3 className="text-lg font-medium text-yayi-brown">Q: 我應該考慮插座和開關的位置嗎？</h3>
-                <p>A: 是的，這非常重要。請記錄所有電源插座、開關和其他固定裝置的位置，以便我們在設計時考慮這些因素。</p>
-              </div>
-              
-              <div>
-                <h3 className="text-lg font-medium text-yayi-brown">Q: 我可以直接請你們來測量嗎？</h3>
-                <p>A: 當然可以。我們提供專業的上門測量服務，確保所有數據精確無誤。您可以聯繫我們預約測量時間。</p>
-              </div>
-            </div>
-          </section>
-          
+          </section>          
           <div className="mt-12 bg-yayi-brown p-6 rounded-lg text-white">
-            <h2 className="text-2xl font-semibold mb-3">預約專業測量</h2>
-            <p className="mb-4">若您希望獲得更精準的測量結果，歡迎預約我們的專業測量服務。</p>
+            <p className="mb-4">歡迎加入我們的 LINE 官方帳號了解更多</p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a 
                 href="/contact-us" 
@@ -147,7 +106,7 @@ const MeasuringGuide = () => {
                 聯絡我們
               </a>
               <a 
-                href="https://line.me/R/ti/p/@123abcde" 
+                href="https://line.me/R/ti/p/@YAYI" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="bg-transparent border border-white hover:bg-white hover:text-yayi-brown px-6 py-3 rounded-md text-center font-medium transition-colors"
