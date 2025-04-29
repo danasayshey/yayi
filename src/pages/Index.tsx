@@ -83,10 +83,10 @@ const Index = () => {
               </Button>
               <Button
                 variant="outline"
-                className="border-white text-white hover:bg-white hover:text-yayi-brown"
+                className="border-white text-yayi-gold hover:bg-white hover:text-yayi-brown"
                 size="lg"
                 onClick={() =>
-                  window.open("https://line.me/R/ti/p/@123abcde", "_blank")
+                  window.open("https://line.me/R/ti/p/@YAYI", "_blank")
                 }
               >
                 LINE下單
