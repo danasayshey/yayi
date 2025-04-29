@@ -11,7 +11,6 @@ import ProductDetail from "./pages/ProductDetail";
 import MeasuringGuide from "./pages/MeasuringGuide";
 import OrderProcess from "./pages/OrderProcess";
 import AboutUs from "./pages/AboutUs";
-import ContactUs from "./pages/ContactUs";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -30,7 +29,6 @@ const App = () => (
             <Route path="measuring-guide" element={<MeasuringGuide />} />
             <Route path="order-process" element={<OrderProcess />} />
             <Route path="about-us" element={<AboutUs />} />
-            <Route path="contact-us" element={<ContactUs />} />
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
