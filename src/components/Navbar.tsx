@@ -5,6 +5,9 @@ import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 
 export function Navbar() {
+  const logoUrl =
+  import.meta.env.BASE_URL +
+  "lovable-uploads/bb26c18f-c1be-48df-98e3-f936217ddd03.png";
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
@@ -49,7 +52,7 @@ export function Navbar() {
         <div className="flex justify-between items-center">
           <Link to="/" className="flex items-center" onClick={closeMenu}>
             <img
-              src="/lovable-uploads/bb26c18f-c1be-48df-98e3-f936217ddd03.png"
+              src={logoUrl}
               alt="雅藝系統櫃"
               className="h-12 md:h-16"
             />
