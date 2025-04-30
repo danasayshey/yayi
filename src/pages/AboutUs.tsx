@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Phone, Mail, MapPin } from "lucide-react";
 
+
 const AboutUs = () => {
   const values = [
     {
@@ -77,6 +78,10 @@ const AboutUs = () => {
           </div>
       </section>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-10">
+        {/* 聯繫雅藝系統櫃 */}
+       <section className="mb-16">
+        <h2 className="text-2xl font-semibold mb-8 text-center text-yayi-brown">聯繫雅藝系統櫃</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
   <Card className="border-yayi-beige hover:border-yayi-gold transition-colors">
     <CardContent className="p-6 flex flex-col items-center">
       <div className="w-12 h-12 bg-yayi-gold rounded-full flex items-center justify-center text-white mb-4">
@@ -121,19 +126,21 @@ const AboutUs = () => {
     掃描QR碼或點擊下方按鈕，透過LINE與我們的客服人員直接對話
   </p>
   <div className="flex flex-col sm:flex-row items-center justify-center gap-8">
-    <div className="bg-white p-4 rounded-lg shadow-md">
-      <div className="w-40 h-40 bg-gray-200 flex items-center justify-center">
-        <span className="text-gray-600">LINE QR碼</span>
-      </div>
-    </div>
+  <div className="bg-white p-4 rounded-lg shadow-md">
+   <div className="w-40 h-40 overflow-hidden rounded-md mx-auto">
+     <img
+       src={import.meta.env.BASE_URL + "images/LINE-QRcode.png"}
+       alt="加入 LINE 好友 QR Code"
+       className="w-full h-full object-cover"
+     />
+   </div>
++ </div>
     <Button
       className="bg-yayi-gold hover:bg-opacity-80 text-white px-8"
       onClick={() => window.open("https://line.me/R/ti/p/@YAYI", "_blank")}
     >
       加入LINE好友
     </Button>
-  </div>
-  </div>
   </div>
   </div>
   );
