@@ -1,0 +1,26 @@
+[
+  {
+    "id": "cabinet-2",
+    "name": "臥室衣櫃系統",
+    "tags": [
+      "開門式衣櫃",
+      "美觀",
+      "三種顏色"
+    ],
+    "description": "這款臥室衣櫃…",
+    "material": "E1級環保板材",
+    "color": "白橡木紋",
+    "images": [
+      "https://drive.google.com/uc?export=view&id=image_1",
+      "https://drive.google.com/uc?export=view&id=image_2"
+    ],
+    "features": [
+      "開門式設計…",
+      "全高度衣物空間"
+    ],
+    "sizes": [
+      "寬180cm x 高210cm x 深60cm",
+      "另一尺寸…"
+    ]
+  }
+]

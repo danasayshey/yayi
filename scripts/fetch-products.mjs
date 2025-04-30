@@ -1,43 +1,64 @@
 // scripts/fetch-products.mjs
-import fs   from "fs";
-import path from "path";
+import fs   from 'fs';
+import path from 'path';
+import { parse } from 'csv-parse/sync';
+import 'dotenv/config';
 
-// Node ≥18 已內建 global fetch，若想相容舊版：`import fetch from 'node-fetch';`
-const SHEET_ID = process.env.SHEET_ID;                       // 👉 把 <SHEET_ID> 往 .env 移
+const SHEET_ID = process.env.SHEET_ID;
 if (!SHEET_ID) {
-  console.error("❌  SHEET_ID 環境變數未設定！");
+  console.error('❌  缺少 SHEET_ID，請在 .env.local 或 Repo Secret 設定');
   process.exit(1);
 }
 
+/* -------------------------------------------------------------------------- */
+/* 1. 下載試算表 CSV                                                            */
+/* -------------------------------------------------------------------------- */
 const CSV_URL =
   `https://docs.google.com/spreadsheets/d/${SHEET_ID}/export?format=csv&v=${Date.now()}`;
 
-const csv = await fetch(CSV_URL).then(r => r.text());
+const csvText = await fetch(CSV_URL).then(r => r.text()).catch(err => {
+  console.error('❌  下載 Google Sheet 失敗', err);
+  process.exit(1);
+});
 
-// --- 把 CSV 轉 JSON -----------------------------------------------------------
-function parse(csvText) {
-  const lines  = csvText.trim().split("\n").map(l => l.split(","));
-  const header = lines.shift();
-  return lines.map(row =>
-    Object.fromEntries(row.map((v, i) => [header[i], v.trim()]))
-  );
-}
+/* -------------------------------------------------------------------------- */
+/* 2. CSV → JS 物件                                                             */
+/* -------------------------------------------------------------------------- */
+const rows = parse(csvText, { columns: true, skip_empty_lines: true });
 
-const products = parse(csv).map(p => ({
-  ...p,
-  images: p.images             // images 欄位：以逗號分隔的 Drive fileId 清單
-    .split(",")
-    .filter(Boolean)
-    .map(id => `https://drive.google.com/uc?export=view&id=${id.trim()}`)
-}));
+const products = rows.map(raw => {
+  /* ---------- 動態抓欄位：image_ / feature_ / size_ ----------------------- */
+  const images   = Object.keys(raw)
+    .filter(k => k.toLowerCase().startsWith('image_')   && raw[k])
+    .map(id => `https://drive.google.com/uc?export=view&id=${id.trim()}`);
 
-// --- 輸出到 src/data ----------------------------------------------------------
-const dataDir = path.resolve("src", "data");
-fs.mkdirSync(dataDir, { recursive: true });
-fs.writeFileSync(
-  path.join(dataDir, "products.json"),
-  JSON.stringify(products, null, 2),
-  "utf8"
-);
+  const features = Object.keys(raw)
+    .filter(k => k.toLowerCase().startsWith('feature_') && raw[k])
+    .map(k => raw[k]);
 
+  const sizes    = Object.keys(raw)
+    .filter(k => k.toLowerCase().startsWith('size_')    && raw[k])
+    .map(k => raw[k]);
+
+  return {
+    id:          raw.id.trim(),
+    name:        raw.name?.trim()        || '',
+    tags:        raw.tags?.split(',').map(t => t.trim()).slice(0, 3) || [],
+    description: raw.description?.trim() || '',
+    material:    raw.material?.trim()    || '',
+    color:       raw.color?.trim()       || '',
+    images,
+    features,
+    sizes
+  };
+});
+
+/* -------------------------------------------------------------------------- */
+/* 3. 輸出到 src/data/products.json                                            */
+/* -------------------------------------------------------------------------- */
+const outDir = path.resolve('src', 'data');
+fs.mkdirSync(outDir, { recursive: true });
+
+const outfile = path.join(outDir, 'products.json');
+fs.writeFileSync(outfile, JSON.stringify(products, null, 2));
 console.log(`✅  products.json updated  (${products.length} items)`);
