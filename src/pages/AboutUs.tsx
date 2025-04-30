@@ -128,13 +128,14 @@ const AboutUs = () => {
     </div>
     <Button
       className="bg-yayi-gold hover:bg-opacity-80 text-white px-8"
-      onClick={() => window.open("https://line.me/R/ti/p/@123abcde", "_blank")}
+      onClick={() => window.open("https://line.me/R/ti/p/@YAYI", "_blank")}
     >
       加入LINE好友
     </Button>
   </div>
-</div>
-    </div>
+  </div>
+  </div>
+  </div>
   );
 };
 
