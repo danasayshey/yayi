@@ -6,8 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "predeploy": "npm run build",
-    "deploy":   "gh-pages -d dist",
+    "predeploy": "npm run build && node -e \"const fs=require('fs');let h=fs.readFileSync('dist/index.html','utf8');fs.writeFileSync('dist/index.html',h.replace(/<script[^>]*gptengineer\\.js[^>]*><\\/script>\\s*/g,''));\"",
+    "deploy": "gh-pages -d dist --cname www.yayiyayiyayi.com",
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
     "preview": "vite preview"
