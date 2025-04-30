@@ -3,6 +3,7 @@ import fs   from 'fs';
 import path from 'path';
 import { parse } from 'csv-parse/sync';
 import 'dotenv/config';
+import { config } from 'dotenv';
 
 const SHEET_ID = process.env.SHEET_ID;
 if (!SHEET_ID) {

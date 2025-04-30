@@ -1,6 +1,6 @@
 [
   {
-    "id": "cabinet-2",
+    "id": "cabinet-1",
     "name": "臥室衣櫃系統",
     "tags": [
       "開門式衣櫃",
@@ -22,5 +22,18 @@
       "寬180cm x 高210cm x 深60cm",
       "另一尺寸…"
     ]
+  },
+  {
+    "id": "cabinet-2",
+    "name": "",
+    "tags": [
+      ""
+    ],
+    "description": "",
+    "material": "",
+    "color": "",
+    "images": [],
+    "features": [],
+    "sizes": []
   }
 ]
