@@ -55,7 +55,7 @@ const AboutUs = () => {
             </div>
             <div className="rounded-lg overflow-hidden shadow-lg">
               <img 
-                src="https://images.unsplash.com/photo-1510415277747-41afb69c67cc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" 
+                src={import.meta.env.BASE_URL + "images/team-workshop.jpg"}
                 alt="雅藝系統櫃" 
                 className="w-full h-auto"
               />
@@ -75,7 +75,7 @@ const AboutUs = () => {
               </div>
             ))}
           </div>
-      </div>
+      </section>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-10">
   <Card className="border-yayi-beige hover:border-yayi-gold transition-colors">
     <CardContent className="p-6 flex flex-col items-center">
