@@ -39,7 +39,7 @@ export function Navbar() {
     { name: "量測指南", path: "/measuring-guide" },
     { name: "訂購流程 & FAQ", path: "/order-process" },
     { name: "關於我們", path: "/about-us" },
-    { name: "聯絡我們", path: "/contact-us" },
+    
   ];
 
   return (
