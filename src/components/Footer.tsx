@@ -39,11 +39,6 @@ export function Footer() {
                   關於我們
                 </Link>
               </li>
-              <li>
-                <Link to="/contact-us" className="hover:text-yayi-gold transition-colors">
-                  聯絡我們
-                </Link>
-              </li>
             </ul>
           </div>
 
