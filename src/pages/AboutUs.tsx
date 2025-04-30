@@ -76,74 +76,89 @@ const AboutUs = () => {
               </div>
             ))}
           </div>
-      </section>
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-10">
-        {/* 聯繫雅藝系統櫃 */}
-       <section className="mb-16">
-        <h2 className="text-2xl font-semibold mb-8 text-center text-yayi-brown">聯繫雅藝系統櫃</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-  <Card className="border-yayi-beige hover:border-yayi-gold transition-colors">
-    <CardContent className="p-6 flex flex-col items-center">
-      <div className="w-12 h-12 bg-yayi-gold rounded-full flex items-center justify-center text-white mb-4">
-        <Phone className="h-5 w-5" />
-      </div>
-      <h3 className="text-xl font-medium mb-2 text-yayi-brown">電話</h3>
-      <p className="text-center text-gray-600">
-       (03)2870572<br />
-        週一至週日 10:00 - 18:00
-      </p>
-    </CardContent>
-  </Card>
+          +  </section>
 
-  <Card className="border-yayi-beige hover:border-yayi-gold transition-colors">
-    <CardContent className="p-6 flex flex-col items-center">
-      <div className="w-12 h-12 bg-yayi-gold rounded-full flex items-center justify-center text-white mb-4">
-        <Mail className="h-5 w-5" />
+  {/* ── 「联系雅艺系统柜」 Section 开始 ── */}
+    <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-10">
+    <section className="mb-16 lg:col-span-3">
+      <h2 className="text-2xl font-semibold mb-8 text-center text-yayi-brown">
+        聯繫雅藝系統櫃
+      </h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        {/* 电话 卡片 */}
+        <Card className="border-yayi-beige hover:border-yayi-gold transition-colors">
+          <CardContent className="p-6 flex flex-col items-center">
+            <div className="w-12 h-12 bg-yayi-gold rounded-full flex items-center justify-center text-white mb-4">
+              <Phone className="h-5 w-5" />
+            </div>
+            <h3 className="text-xl font-medium mb-2 text-yayi-brown">電話</h3>
+            <p className="text-center text-gray-600">
+              (03)2870572<br/>
+              週一至週日 10:00 - 18:00
+            </p>
+          </CardContent>
+        </Card>
+        {/* 電子郵件 卡片 */}
+        <Card className="border-yayi-beige hover:border-yayi-gold transition-colors">
+          <CardContent className="p-6 flex flex-col items-center">
+            <div className="w-12 h-12 bg-yayi-gold rounded-full flex items-center justify-center text-white mb-4">
+              <Mail className="h-5 w-5" />
+            </div>
+            <h3 className="text-xl font-medium mb-2 text-yayi-brown">電子郵件</h3>
+            <p className="text-center text-gray-600">
+              xitong778868@gmail.com
+            </p>
+          </CardContent>
+        </Card>
+        {/* 門市地址 卡片 */}
+        <Card className="border-yayi-beige hover:border-yayi-gold transition-colors">
+          <CardContent className="p-6 flex flex-col items-center">
+            <div className="w-12 h-12 bg-yayi-gold rounded-full flex items-center justify-center text-white mb-4">
+              <MapPin className="h-5 w-5" />
+            </div>
+            <h3 className="text-xl font-medium mb-2 text-yayi-brown">門市地址</h3>
+            <p className="text-center text-gray-600">
+              桃園市中壢區青心路30號
+            </p>
+          </CardContent>
+        </Card>
       </div>
-      <h3 className="text-xl font-medium mb-2 text-yayi-brown">電子郵件</h3>
-      <p className="text-center text-gray-600">
-        xitong778868@gmail.com<br />
-      </p>
-    </CardContent>
-  </Card>
 
-  <Card className="border-yayi-beige hover:border-yayi-gold transition-colors">
-    <CardContent className="p-6 flex flex-col items-center">
-      <div className="w-12 h-12 bg-yayi-gold rounded-full flex items-center justify-center text-white mb-4">
-        <MapPin className="h-5 w-5" />
+      {/* 使用 LINE 聯繫更便捷 */}
+      <div className="mt-16 bg-yayi-green bg-opacity-20 p-8 rounded-lg text-center">
+        <h2 className="text-2xl font-semibold mb-3 text-yayi-brown">
+          使用LINE聯繫更便捷
+        </h2>
+        <p className="mb-6">
+          掃描QR碼或點擊下方按鈕，透過LINE與我們的客服人員直接對話
+        </p>
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-8">
+          <div className="bg-white p-4 rounded-lg shadow-md">
+            <div className="w-40 h-40 overflow-hidden rounded-md mx-auto">
+              <img
+                src={import.meta.env.BASE_URL + "images/LINE-QRcode.png"}
+                alt="加入 LINE 好友 QR Code"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+          <Button
+            className="bg-yayi-gold hover:bg-opacity-80 text-white px-8"
+            onClick={() =>
+              window.open("https://line.me/R/ti/p/@YAYI", "_blank")
+            }
+          >
+            加入LINE好友
+          </Button>
+        </div>
       </div>
-      <h3 className="text-xl font-medium mb-2 text-yayi-brown">門市地址</h3>
-      <p className="text-center text-gray-600">
-        桃園市中壢區青心路30號<br />
-      </p>
-    </CardContent>
-  </Card>
-</div>
 
-<div className="mt-16 bg-yayi-green bg-opacity-20 p-8 rounded-lg text-center">
-  <h2 className="text-2xl font-semibold mb-3 text-yayi-brown">使用LINE聯繫更便捷</h2>
-  <p className="mb-6">
-    掃描QR碼或點擊下方按鈕，透過LINE與我們的客服人員直接對話
-  </p>
-  <div className="flex flex-col sm:flex-row items-center justify-center gap-8">
-  <div className="bg-white p-4 rounded-lg shadow-md">
-   <div className="w-40 h-40 overflow-hidden rounded-md mx-auto">
-     <img
-       src={import.meta.env.BASE_URL + "images/LINE-QRcode.png"}
-       alt="加入 LINE 好友 QR Code"
-       className="w-full h-full object-cover"
-     />
-   </div>
-+ </div>
-    <Button
-      className="bg-yayi-gold hover:bg-opacity-80 text-white px-8"
-      onClick={() => window.open("https://line.me/R/ti/p/@YAYI", "_blank")}
-    >
-      加入LINE好友
-    </Button>
+    </section>
   </div>
+
   </div>
-  );
+ </div>
+ );
 };
 
 export default AboutUs;
