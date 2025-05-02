@@ -1,49 +1,60 @@
-
+// src/components/ProductCard.tsx
 import { Link } from "react-router-dom";
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
 
-export interface Product {
+export type Product = {
   id: string;
   name: string;
-  image: string;
-  height: string;
-  doorType: string;
-  drawerCount: number;
-}
+  image?: string;
+  images?: string[];
+  tags?: string[];
+  // 如果還有 height、doorType、drawerCount 等欄位，可自行加回來
+};
 
-interface ProductCardProps {
-  product: Product;
-}
+export function ProductCard({ product }: { product: Product }) {
+  // 優先用 images[0]，沒有就退到單一 image
+  const cover = product.images?.[0] ?? product.image ?? "";
 
-export function ProductCard({ product }: ProductCardProps) {
   return (
-    <Link to={`/products/${product.id}`}>
-      <Card className="overflow-hidden h-full transition-all duration-300 hover:shadow-lg border border-yayi-beige hover:border-yayi-gold">
-        <div className="relative aspect-square overflow-hidden">
-          <img
-            src={product.image}
-            alt={product.name}
-            className="object-cover w-full h-full transition-transform duration-500 hover:scale-110"
-          />
+    <Link
+      to={`/products/${product.id}`}
+      className="
+        block
+        border border-yayi-gold      /* 金色邊框 */
+        rounded-lg                   /* 圓角 */
+        bg-white                     /* 白底 */
+        overflow-hidden              /* 內容不會超出圓角 */
+        hover:shadow-lg              /* 滑鼠經過時陰影 */
+        transition-shadow duration-200
+      "
+    >
+      {/* 圖片區：保持 4:3 寬高比 (aspect-w-4 aspect-h-3) */}
+      <div className="relative w-full aspect-[4/3]">
+        <img
+          src={cover}
+          alt={product.name}
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+      </div>
+
+      {/* 文字區 */}
+      <div className="p-4">
+        <h3 className="text-lg font-medium text-yayi-brown mb-2">
+          {product.name}
+        </h3>
+        <div className="flex flex-wrap gap-1">
+          {(product.tags ?? []).slice(0, 3).map((t, i) => (
+            <span
+              key={i}
+              className={`
+                px-2 py-0.5 rounded-full text-xs text-white
+                ${i === 0 ? "bg-yayi-green" : i === 1 ? "bg-yayi-brown" : "bg-yayi-gold"}
+              `}
+            >
+              {t}
+            </span>
+          ))}
         </div>
-        <CardContent className="p-4">
-          <h3 className="font-medium text-lg mb-2 text-yayi-brown">{product.name}</h3>
-          <div className="flex flex-wrap gap-2">
-            <span className="text-xs px-2 py-1 bg-yayi-green text-yayi-brown rounded-full">
-              {product.height}
-            </span>
-            <span className="text-xs px-2 py-1 bg-yayi-beige text-yayi-brown rounded-full">
-              {product.doorType}
-            </span>
-            <span className="text-xs px-2 py-1 bg-yayi-gray bg-opacity-30 text-yayi-brown rounded-full">
-              {product.drawerCount}層抽屜
-            </span>
-          </div>
-        </CardContent>
-        <CardFooter className="bg-yayi-brown bg-opacity-5 px-4 py-2">
-          <span className="text-sm text-yayi-gold font-medium">查看詳情</span>
-        </CardFooter>
-      </Card>
+      </div>
     </Link>
   );
 }

@@ -1,31 +1,173 @@
 [
   {
     "id": "cabinet-1",
+    "name": "D#",
+    "category": "開門式衣櫃",
+    "tags": [
+      "💛 五種樣式",
+      "🖤 三種顏色",
+      "🩶 銷量第一"
+    ],
+    "description": "",
+    "material": "E1級環保板材",
+    "color": "白橡木紋、深色木紋",
+    "images": [
+      "https://lh3.googleusercontent.com/d/1rW6F5IF5heh_gVwNmmmEFgOPgo2U_h0j=w2400?v=20250501-0",
+      "https://lh3.googleusercontent.com/d/1_rTb_WqQWPtIICffFeaX3JNbOWxLw-sY=w2400?v=20250501-1",
+      "https://lh3.googleusercontent.com/d/1zfY7SaZC5n3z49izuVvdSKoTJK8tTX1P=w2400?v=20250501-2",
+      "https://lh3.googleusercontent.com/d/1uEY9lXF0RVdH6jkLMEmf2ZBLGR2JQPlQ=w2400?v=20250501-3",
+      "https://lh3.googleusercontent.com/d/1VnMqsdBg-CA-Qs1gBSUu0Pv2FoV8sTeY=w2400?v=20250501-4",
+      "https://lh3.googleusercontent.com/d/13fYniv4hpQREqDS0nHlmDyRNNkp7pm3I=w2400?v=20250501-5"
+    ],
+    "features": [
+      "開門式設計",
+      "全高度衣物空間",
+      "有夠好看",
+      "太酷啦",
+      "很美喔"
+    ],
+    "sizes": [
+      "- 寬240cm x 高210cm x 深60cm",
+      "- 寬200cm x 高210cm x 深60cm",
+      "- 寬160cm x 高210cm x 深60cm",
+      "- 寬120cm x 高210cm x 深60cm",
+      "- 寬80cm x 高210cm x 深60cm",
+      "- 寬60cm x 高210cm x 深60cm"
+    ]
+  },
+  {
+    "id": "cabinet-2",
     "name": "臥室衣櫃系統",
+    "category": "開門式衣櫃",
     "tags": [
       "開門式衣櫃",
       "美觀",
       "三種顏色"
     ],
-    "description": "這款臥室衣櫃…",
+    "description": "這款臥室衣櫃非常好看，站得很穩又很開心",
     "material": "E1級環保板材",
     "color": "白橡木紋",
     "images": [
-      "https://drive.google.com/uc?export=view&id=image_1",
-      "https://drive.google.com/uc?export=view&id=image_2"
+      "https://lh3.googleusercontent.com/d/1H1nl-PelUHlyoDbwW9-cIcdCrEGgPT_5=w2400?v=20250501-0",
+      "https://lh3.googleusercontent.com/d/1pyDxG2OF85XAz2ID9FqJ42YIkhRhuC_O=w2400?v=20250501-1",
+      "https://lh3.googleusercontent.com/d/1vr2ygLMa5Qa1K9XlHU80xFcX9_3AT9s6=w2400?v=20250501-2"
     ],
     "features": [
-      "開門式設計…",
-      "全高度衣物空間"
+      "開門式設計",
+      "全高度衣物空間",
+      "有夠好看",
+      "太酷啦",
+      "很美喔"
     ],
     "sizes": [
       "寬180cm x 高210cm x 深60cm",
-      "另一尺寸…"
+      "寬180cm x 高210cm x 深60cm",
+      "寬180cm x 高210cm x 深60cm",
+      "寬180cm x 高210cm x 深60cm"
     ]
   },
   {
-    "id": "cabinet-2",
+    "id": "cabinet-3",
+    "name": "臥室衣櫃系統",
+    "category": "滑門式衣櫃",
+    "tags": [
+      ""
+    ],
+    "description": "",
+    "material": "",
+    "color": "",
+    "images": [],
+    "features": [],
+    "sizes": []
+  },
+  {
+    "id": "bedside-1",
+    "name": "快樂床頭櫃",
+    "category": "床頭櫃",
+    "tags": [
+      ""
+    ],
+    "description": "",
+    "material": "",
+    "color": "",
+    "images": [],
+    "features": [],
+    "sizes": []
+  },
+  {
+    "id": "shoeshoe-1",
+    "name": "毛毛鞋櫃",
+    "category": "鞋櫃",
+    "tags": [
+      ""
+    ],
+    "description": "",
+    "material": "",
+    "color": "",
+    "images": [],
+    "features": [],
+    "sizes": []
+  },
+  {
+    "id": "cabinet-6",
     "name": "",
+    "category": "",
+    "tags": [
+      ""
+    ],
+    "description": "",
+    "material": "",
+    "color": "",
+    "images": [],
+    "features": [],
+    "sizes": []
+  },
+  {
+    "id": "cabinet-7",
+    "name": "",
+    "category": "",
+    "tags": [
+      ""
+    ],
+    "description": "",
+    "material": "",
+    "color": "",
+    "images": [],
+    "features": [],
+    "sizes": []
+  },
+  {
+    "id": "cabinet-8",
+    "name": "",
+    "category": "",
+    "tags": [
+      ""
+    ],
+    "description": "",
+    "material": "",
+    "color": "",
+    "images": [],
+    "features": [],
+    "sizes": []
+  },
+  {
+    "id": "cabinet-9",
+    "name": "",
+    "category": "",
+    "tags": [
+      ""
+    ],
+    "description": "",
+    "material": "",
+    "color": "",
+    "images": [],
+    "features": [],
+    "sizes": []
+  },
+  {
+    "id": "cabinet-10",
+    "name": "",
+    "category": "",
     "tags": [
       ""
     ],

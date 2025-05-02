@@ -95,13 +95,18 @@ export default function ProductDetail() {
 
             {/* Tag – 最多 3 個 */}
             <div className="flex flex-wrap gap-2 mb-6">
-              {product.tags.map(t => (
-                <span
-                  key={t}
-                  className="px-3 py-1 bg-yayi-beige text-yayi-brown rounded-full text-sm"
+            {product.tags?.slice(0, 3).map((t, i) => (
+             <span
+                key={t}
+                className={
+                  "px-2 py-0.5 rounded-full text-xs text-white " +
+                    (i === 0 ? "bg-yayi-green"
+                    : i === 1 ? "bg-yayi-brown"
+                    :            "bg-yayi-gold")
+               }
                 >
-                  {t}
-                </span>
+                {t}
+            </span>
               ))}
             </div>
 

@@ -1,9 +1,9 @@
 
+import React from "react";
 import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Phone, Mail, MapPin } from "lucide-react";
-
 
 const AboutUs = () => {
   const values = [
@@ -76,54 +76,66 @@ const AboutUs = () => {
               </div>
             ))}
           </div>
-          +  </section>
+            </section>
 
-  {/* ── 「联系雅艺系统柜」 Section 开始 ── */}
-    <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-10">
-    <section className="mb-16 lg:col-span-3">
-      <h2 className="text-2xl font-semibold mb-8 text-center text-yayi-brown">
-        聯繫雅藝系統櫃
-      </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-        {/* 电话 卡片 */}
-        <Card className="border-yayi-beige hover:border-yayi-gold transition-colors">
-          <CardContent className="p-6 flex flex-col items-center">
-            <div className="w-12 h-12 bg-yayi-gold rounded-full flex items-center justify-center text-white mb-4">
-              <Phone className="h-5 w-5" />
-            </div>
-            <h3 className="text-xl font-medium mb-2 text-yayi-brown">電話</h3>
-            <p className="text-center text-gray-600">
-              (03)2870572<br/>
-              週一至週日 10:00 - 18:00
-            </p>
-          </CardContent>
-        </Card>
-        {/* 電子郵件 卡片 */}
-        <Card className="border-yayi-beige hover:border-yayi-gold transition-colors">
-          <CardContent className="p-6 flex flex-col items-center">
-            <div className="w-12 h-12 bg-yayi-gold rounded-full flex items-center justify-center text-white mb-4">
-              <Mail className="h-5 w-5" />
-            </div>
-            <h3 className="text-xl font-medium mb-2 text-yayi-brown">電子郵件</h3>
-            <p className="text-center text-gray-600">
-              xitong778868@gmail.com
-            </p>
-          </CardContent>
-        </Card>
-        {/* 門市地址 卡片 */}
-        <Card className="border-yayi-beige hover:border-yayi-gold transition-colors">
-          <CardContent className="p-6 flex flex-col items-center">
-            <div className="w-12 h-12 bg-yayi-gold rounded-full flex items-center justify-center text-white mb-4">
-              <MapPin className="h-5 w-5" />
-            </div>
-            <h3 className="text-xl font-medium mb-2 text-yayi-brown">門市地址</h3>
-            <p className="text-center text-gray-600">
-              桃園市中壢區青心路30號
-            </p>
-          </CardContent>
-        </Card>
-      </div>
+        {/* 聯繫雅藝系統櫃 Section */}
+        <section className="mt-16">
+          <h2 className="text-2xl font-semibold mb-8 text-center text-yayi-brown">
+            聯繫雅藝系統櫃
+          </h2>
 
+          <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 mb-10 items-stretch">
+            {/* 電話 卡片 */}
+            <Card className="border-yayi-beige hover:border-yayi-gold transition-colors">
+              <CardContent className="p-6 flex flex-col items-center">
+                <div className="w-12 h-12 bg-yayi-gold rounded-full flex items-center justify-center text-white mb-4">
+                  <Phone className="h-5 w-5" />
+                </div>
+                <h3 className="text-xl font-medium mb-2 text-yayi-brown">電話</h3>
+                <p className="text-center text-gray-600">
+                  (03)2870572<br />
+                  週一至週日 10:00 - 18:00
+                </p>
+              </CardContent>
+            </Card>
+
+            {/* 電子郵件 卡片 */}
+            <Card className="border-yayi-beige hover:border-yayi-gold transition-colors">
+              <CardContent className="p-6 flex flex-col items-center">
+                <div className="w-12 h-12 bg-yayi-gold rounded-full flex items-center justify-center text-white mb-4">
+                  <Mail className="h-5 w-5" />
+                </div>
+                <h3 className="text-xl font-medium mb-2 text-yayi-brown">電子郵件</h3>
+                <p className="text-center text-gray-600">
+                  xitong778868@gmail.com
+                </p>
+              </CardContent>
+            </Card>
+
+            {/* 門市地址 卡片 */}
+            <Card className="border-yayi-beige hover:border-yayi-gold transition-colors">
+              <CardContent className="p-6 flex flex-col items-center">
+                <div className="w-12 h-12 bg-yayi-gold rounded-full flex items-center justify-center text-white mb-4">
+                  <MapPin className="h-5 w-5" />
+                </div>
+                <h3 className="text-xl font-medium mb-2 text-yayi-brown">門市地址</h3>
+                <p className="text-center text-gray-600">
+                  桃園市中壢區青心路30號
+                </p>
+              </CardContent>
+            </Card>
+
+            {/* Google Maps */}
+            <div className="border-yayi-beige rounded-lg overflow-hidden">
+              <iframe
+                title="雅藝系統櫃門市地圖"
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d28925.216724115493!2d121.1825383!3d25.0119352!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346821d488a83541%3A0x9400138b18a51a2c!2z6ZuF6Jed57O757Wx5quDL1lBWUnjgq_jg63jg7zjgrzjg4Pjg4g!5e0!3m2!1szh-TW!2stw!4v1746064466114!5m2!1szh-TW!2stw"
+                className="w-full h-full border-0"
+                allowFullScreen
+                loading="lazy"
+              />
+            </div>
+          </div>
       {/* 使用 LINE 聯繫更便捷 */}
       <div className="mt-16 bg-yayi-green bg-opacity-20 p-8 rounded-lg text-center">
         <h2 className="text-2xl font-semibold mb-3 text-yayi-brown">
@@ -155,9 +167,7 @@ const AboutUs = () => {
 
     </section>
   </div>
-
   </div>
- </div>
  );
 };
 

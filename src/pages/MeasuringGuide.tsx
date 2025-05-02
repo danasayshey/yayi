@@ -97,23 +97,18 @@ const MeasuringGuide = () => {
           </div>
           </section>          
           <div className="mt-12 bg-yayi-brown p-6 rounded-lg text-white">
-            <p className="mb-4">歡迎加入我們的 LINE 官方帳號了解更多</p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <a 
-                href="/contact-us" 
-                className="bg-yayi-gold hover:bg-opacity-80 text-white px-6 py-3 rounded-md text-center font-medium"
-              >
-                聯絡我們
-              </a>
-              <a 
-                href="https://line.me/R/ti/p/@YAYI" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="bg-transparent border border-white hover:bg-white hover:text-yayi-brown px-6 py-3 rounded-md text-center font-medium transition-colors"
-              >
-                LINE 預約
+          <p className="mb-4">歡迎加入我們的 LINE 官方帳號了解更多</p>
+          <div className="flex justify-start">
+          <a
+          href="https://line.me/R/ti/p/@YAYI"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-yayi-gold hover:bg-opacity-80 text-white px-6 py-3 rounded-md text-center font-medium"
+            >
+              LINE 預約
               </a>
             </div>
+
           </div>
         </div>
       </div>
