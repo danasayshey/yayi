@@ -35,7 +35,8 @@ export function Navbar() {
 
   const navLinks = [
     { name: "首頁", path: "/" },
-    { name: "產品", path: "/products" },
+    { name: "產品總覽", path: "/products" },
+    { name: "案例分享", path: "/cases" },
     { name: "量測指南", path: "/measuring-guide" },
     { name: "訂購流程 & FAQ", path: "/order-process" },
     { name: "關於我們", path: "/about-us" },

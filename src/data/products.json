@@ -12,12 +12,12 @@
     "material": "E1級環保板材",
     "color": "白橡木紋、深色木紋",
     "images": [
-      "https://lh3.googleusercontent.com/d/1rW6F5IF5heh_gVwNmmmEFgOPgo2U_h0j=w2400?v=20250501-0",
-      "https://lh3.googleusercontent.com/d/1_rTb_WqQWPtIICffFeaX3JNbOWxLw-sY=w2400?v=20250501-1",
-      "https://lh3.googleusercontent.com/d/1zfY7SaZC5n3z49izuVvdSKoTJK8tTX1P=w2400?v=20250501-2",
-      "https://lh3.googleusercontent.com/d/1uEY9lXF0RVdH6jkLMEmf2ZBLGR2JQPlQ=w2400?v=20250501-3",
-      "https://lh3.googleusercontent.com/d/1VnMqsdBg-CA-Qs1gBSUu0Pv2FoV8sTeY=w2400?v=20250501-4",
-      "https://lh3.googleusercontent.com/d/13fYniv4hpQREqDS0nHlmDyRNNkp7pm3I=w2400?v=20250501-5"
+      "https://lh3.googleusercontent.com/d/1rW6F5IF5heh_gVwNmmmEFgOPgo2U_h0j=w2400?v=20250817-0",
+      "https://lh3.googleusercontent.com/d/1_rTb_WqQWPtIICffFeaX3JNbOWxLw-sY=w2400?v=20250817-1",
+      "https://lh3.googleusercontent.com/d/1zfY7SaZC5n3z49izuVvdSKoTJK8tTX1P=w2400?v=20250817-2",
+      "https://lh3.googleusercontent.com/d/1uEY9lXF0RVdH6jkLMEmf2ZBLGR2JQPlQ=w2400?v=20250817-3",
+      "https://lh3.googleusercontent.com/d/1VnMqsdBg-CA-Qs1gBSUu0Pv2FoV8sTeY=w2400?v=20250817-4",
+      "https://lh3.googleusercontent.com/d/13fYniv4hpQREqDS0nHlmDyRNNkp7pm3I=w2400?v=20250817-5"
     ],
     "features": [
       "開門式設計",
@@ -48,9 +48,9 @@
     "material": "E1級環保板材",
     "color": "白橡木紋",
     "images": [
-      "https://lh3.googleusercontent.com/d/1H1nl-PelUHlyoDbwW9-cIcdCrEGgPT_5=w2400?v=20250501-0",
-      "https://lh3.googleusercontent.com/d/1pyDxG2OF85XAz2ID9FqJ42YIkhRhuC_O=w2400?v=20250501-1",
-      "https://lh3.googleusercontent.com/d/1vr2ygLMa5Qa1K9XlHU80xFcX9_3AT9s6=w2400?v=20250501-2"
+      "https://lh3.googleusercontent.com/d/1H1nl-PelUHlyoDbwW9-cIcdCrEGgPT_5=w2400?v=20250817-0",
+      "https://lh3.googleusercontent.com/d/1pyDxG2OF85XAz2ID9FqJ42YIkhRhuC_O=w2400?v=20250817-1",
+      "https://lh3.googleusercontent.com/d/1vr2ygLMa5Qa1K9XlHU80xFcX9_3AT9s6=w2400?v=20250817-2"
     ],
     "features": [
       "開門式設計",
@@ -70,9 +70,7 @@
     "id": "cabinet-3",
     "name": "臥室衣櫃系統",
     "category": "滑門式衣櫃",
-    "tags": [
-      ""
-    ],
+    "tags": [],
     "description": "",
     "material": "",
     "color": "",
@@ -84,9 +82,7 @@
     "id": "bedside-1",
     "name": "快樂床頭櫃",
     "category": "床頭櫃",
-    "tags": [
-      ""
-    ],
+    "tags": [],
     "description": "",
     "material": "",
     "color": "",
@@ -98,9 +94,7 @@
     "id": "shoeshoe-1",
     "name": "毛毛鞋櫃",
     "category": "鞋櫃",
-    "tags": [
-      ""
-    ],
+    "tags": [],
     "description": "",
     "material": "",
     "color": "",
@@ -110,39 +104,124 @@
   },
   {
     "id": "cabinet-6",
-    "name": "",
-    "category": "",
+    "name": "WYF822",
+    "category": "開門式衣櫃",
     "tags": [
-      ""
+      "⏰限時活動優惠中",
+      "🥇銷量第一",
+      "簡約百搭"
     ],
-    "description": "",
-    "material": "",
-    "color": "",
-    "images": [],
-    "features": [],
-    "sizes": []
+    "description": "限時優惠贈送上方封板/遷移開關插座擇一",
+    "material": "甲醛檢測等級：E0",
+    "color": "櫃身：白　櫃門：白",
+    "images": [
+      "https://lh3.googleusercontent.com/d/1JpA1ns7ukH_m76aL-kkZCBKNRuaxTxEd=w2400?v=20250817-0",
+      "https://lh3.googleusercontent.com/d/1LCo3G4Z0TaMgatNOZvqGGIHNTFml0WHY=w2400?v=20250817-1",
+      "https://lh3.googleusercontent.com/d/18_zvsKOen8AkJdv02mbOJcmHJdvILUWb=w2400?v=20250817-2",
+      "https://lh3.googleusercontent.com/d/1JAJlujkAQOtdyGoMsu27cifnDYrL7_kL=w2400?v=20250817-3",
+      "https://lh3.googleusercontent.com/d/1LAgowGI812zP4qvCBXvcnpU6L7CzoxNZ=w2400?v=20250817-4",
+      "https://lh3.googleusercontent.com/d/154rVxFhh4hiiTC73h1ByE9IivLU2J6Cr=w2400?v=20250817-5",
+      "https://lh3.googleusercontent.com/d/1iAVBr6bIXHuiyBLuKSCAXtSBoTqOzUXk=w2400?v=20250817-6",
+      "https://lh3.googleusercontent.com/d/13V5B-WIjOBMQbDsxOJNsIBpVZsJ3oQH5=w2400?v=20250817-7",
+      "https://lh3.googleusercontent.com/d/17NfEmCL25ajqvCv4r7-O7pDQ08Lqsmja=w2400?v=20250817-8",
+      "https://lh3.googleusercontent.com/d/1AE-gViOs-1uO8clJ4b5l4l6wgSGwRwFW=w2400?v=20250817-9",
+      "https://lh3.googleusercontent.com/d/1Hw5VPpLWOJV-ctO9_4iUW98f_QzJlpQT=w2400?v=20250817-10",
+      "https://lh3.googleusercontent.com/d/1BRPibe0Wl9QlagmPQcRTcpaJgd-uTDnk=w2400?v=20250817-11",
+      "https://lh3.googleusercontent.com/d/1AA4NMSqeKvhszEc57Uw508m49lU8FRsq=w2400?v=20250817-12",
+      "https://lh3.googleusercontent.com/d/1mClXb_tAwGdQmRCMljS2YB-uRVGI0DsF=w2400?v=20250817-13",
+      "https://lh3.googleusercontent.com/d/1hsXHeKSAg7gSJmr2Ln0Yyjhw4H5n_Z13=w2400?v=20250817-14",
+      "https://lh3.googleusercontent.com/d/1mISnoCxHdk-49z4qHZnOkRUp8HDnQbRE=w2400?v=20250817-15"
+    ],
+    "features": [
+      "開門式設計",
+      "簡約百搭的衣櫃",
+      "多掛衣空間",
+      "低甲醛",
+      "板厚18mm"
+    ],
+    "sizes": [
+      "- 寬240cm x 高240cm x 深60cm",
+      "- 寬200cm x 高240cm x 深60cm",
+      "- 寬180cm x 高240cm x 深60cm",
+      "- 寬160cm x 高240cm x 深60cm",
+      "- 寬140cm x 高240cm x 深60cm",
+      "- 寬120cm x 高240cm x 深60cm",
+      "- 寬80cm x 高240cm x 深60cm",
+      "- 寬240cm x 高200cm x 深60cm",
+      "- 寬200cm x 高200cm x 深60cm",
+      "- 寬180cm x 高200cm x 深60cm",
+      "- 寬160cm x 高200cm x 深60cm",
+      "- 寬140cm x 高200cm x 深60cm",
+      "- 寬120cm x 高200cm x 深60cm",
+      "- 寬80cm x 高200cm x 深60cm",
+      "- 寬40cm x 高200cm x 深60cm",
+      "- 寬40cm x 高240cm x 深60cm"
+    ]
   },
   {
     "id": "cabinet-7",
-    "name": "",
-    "category": "",
+    "name": "WYF11",
+    "category": "開門式衣櫃",
     "tags": [
-      ""
+      "開門式衣櫃",
+      "美觀",
+      "2種門板顏色"
     ],
-    "description": "",
-    "material": "",
-    "color": "",
-    "images": [],
-    "features": [],
-    "sizes": []
+    "description": "超熱銷工業風大衣櫃",
+    "material": "甲醛檢測等級：E0",
+    "color": "櫃身：灰　櫃門：灰、白",
+    "images": [
+      "https://lh3.googleusercontent.com/d/1GZ8YbJ-yjRWtRXAelwK67-KZFnHlwBIB=w2400?v=20250817-0",
+      "https://lh3.googleusercontent.com/d/17kAhpG6BLPkfKdVqLze98SRi7XVW5WIp=w2400?v=20250817-1",
+      "https://lh3.googleusercontent.com/d/1lP1xs3a9Jr85uFk2XWzMBVT6nSW35fPF=w2400?v=20250817-2",
+      "https://lh3.googleusercontent.com/d/18O9AmsFuh_r15RyxcoYkbwGmNg6UMbSd=w2400?v=20250817-3",
+      "https://lh3.googleusercontent.com/d/1c0R-SJWwDgwhQtpF8AF_rpZuODyyGEla=w2400?v=20250817-4",
+      "https://lh3.googleusercontent.com/d/1uZHv2aBPHLONHu_TUFL3whS50GX7lYzh=w2400?v=20250817-5",
+      "https://lh3.googleusercontent.com/d/1hGpDPFk437QC-4TEnmByzDx7MWLNGzsR=w2400?v=20250817-6",
+      "https://lh3.googleusercontent.com/d/1wdXCyuRrsYq5TPk8x4-QraDXt_fx84yt=w2400?v=20250817-7",
+      "https://lh3.googleusercontent.com/d/1JBah3jRgMkpBbTxLF0nlysDWelxrGlrO=w2400?v=20250817-8",
+      "https://lh3.googleusercontent.com/d/1zpSVz1JpiZUKHtqWfrYCCZd-F3CHecXg=w2400?v=20250817-9",
+      "https://lh3.googleusercontent.com/d/1j7RZeShn9kn_M2wW3I5YWcYojgxX8Qwk=w2400?v=20250817-10",
+      "https://lh3.googleusercontent.com/d/12uBKecCbSEVP_ZDSHbH2XBZrcgaNhNjB=w2400?v=20250817-11",
+      "https://lh3.googleusercontent.com/d/1n_xh8R4T5tkk1GIOd_gUeDNIHkdK7U8S=w2400?v=20250817-12",
+      "https://lh3.googleusercontent.com/d/13a9KwA20xWHOfHlqR8WtDkPbsjWFcMmo=w2400?v=20250817-13",
+      "https://lh3.googleusercontent.com/d/1CQvSzERYhDmqjHGbcVv_q-aHB7tBapuO=w2400?v=20250817-14",
+      "https://lh3.googleusercontent.com/d/d/1xXrFTXrGjSA8nx3LupvzMvHKUPa1MGrA=w2400?v=20250817-15",
+      "https://lh3.googleusercontent.com/d/1XOOkpc2zKWGl4rvUrKJLASkK_Zc2yISY=w2400?v=20250817-16",
+      "https://lh3.googleusercontent.com/d/17hFyyEd3fLgwiZH2zwCqk-bfRe01jBOt=w2400?v=20250817-17"
+    ],
+    "features": [
+      "開門式設計",
+      "簡約百搭的衣櫃",
+      "多掛衣空間",
+      "低甲醛",
+      "板厚18mm"
+    ],
+    "sizes": [
+      "- 寬240cm x 高240cm x 深60cm",
+      "- 寬220cm x 高240cm x 深60cm",
+      "- 寬200cm x 高240cm x 深60cm",
+      "- 寬180cm x 高240cm x 深60cm",
+      "- 寬160cm x 高240cm x 深60cm",
+      "- 寬140cm x 高240cm x 深60cm",
+      "- 寬120cm x 高240cm x 深60cm",
+      "- 寬80cm x 高240cm x 深60cm",
+      "- 寬240cm x 高200cm x 深60cm",
+      "- 寬220cm x 高200cm x 深60cm",
+      "- 寬200cm x 高200cm x 深60cm",
+      "- 寬180cm x 高200cm x 深60cm",
+      "- 寬160cm x 高200cm x 深60cm",
+      "- 寬140cm x 高200cm x 深60cm",
+      "- 寬120cm x 高200cm x 深60cm",
+      "- 寬80cm x 高200cm x 深60cm",
+      "- 寬30cm x 高200cm x 深60cm"
+    ]
   },
   {
     "id": "cabinet-8",
     "name": "",
     "category": "",
-    "tags": [
-      ""
-    ],
+    "tags": [],
     "description": "",
     "material": "",
     "color": "",
@@ -154,9 +233,7 @@
     "id": "cabinet-9",
     "name": "",
     "category": "",
-    "tags": [
-      ""
-    ],
+    "tags": [],
     "description": "",
     "material": "",
     "color": "",
@@ -168,9 +245,7 @@
     "id": "cabinet-10",
     "name": "",
     "category": "",
-    "tags": [
-      ""
-    ],
+    "tags": [],
     "description": "",
     "material": "",
     "color": "",
