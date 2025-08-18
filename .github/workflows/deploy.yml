@@ -1,52 +1,48 @@
+# .github/workflows/deploy.yml
 name: Deploy (build on CI → publish to gh-pages)
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   workflow_dispatch:
 
 permissions:
-  contents: write
-
-concurrency:
-  group: pages-deploy
-  cancel-in-progress: true
+  contents: write   # gh-pages 需要
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    env:
+      # 👇 這三個一定要在 repo 的 Settings → Secrets and variables → Actions → "New repository secret" 設好
+      SHEET_ID: ${{ secrets.SHEET_ID }}
+      PRODUCTS_GID: ${{ secrets.PRODUCTS_GID }}
+      CASES_GID: ${{ secrets.CASES_GID }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
+      - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 22
-          cache: npm
+          node-version: 20
+          cache: 'npm'
 
-      - name: Install dependencies
+      - name: Install deps
         run: npm ci
 
-      # 這一步會觸發你的 "prebuild"（若有設定）去跑 fetch-products.mjs / fetch-cases.mjs
-      # 並把 Secrets/Vars 注入給這些腳本使用
-      - name: Build (fetch from Google Sheets + Vite)
-        env:
-          SHEET_ID: ${{ secrets.SHEET_ID }}
-          PRODUCTS_GID: ${{ vars.PRODUCTS_GID }}
-          CASES_GID: ${{ vars.CASES_GID }}
+      # （可選）確認環境變數有沒有進來，方便除錯
+      - name: Echo env (masked)
         run: |
-          npm run build
+          echo "SHEET_ID set? -> $([ -n "$SHEET_ID" ] && echo YES || echo NO)"
+          echo "PRODUCTS_GID set? -> $([ -n "$PRODUCTS_GID" ] && echo YES || echo NO)"
+          echo "CASES_GID set? -> $([ -n "$CASES_GID" ] && echo YES || echo NO)"
 
-      # 若你有 postbuild（清 gptengineer.js、產 404.html），就留著
-      - name: Postbuild
-        run: npm run postbuild
+      - name: Build
+        run: npm run build
 
-      - name: Deploy to gh-pages
+      - name: Publish to gh-pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
           cname: www.yayiyayiyayi.com
-          user_name: github-actions[bot]
-          user_email: 41898282+github-actions[bot]@users.noreply.github.com

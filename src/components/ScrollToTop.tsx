@@ -2,30 +2,23 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
-/** 切頁時自動回到頂部；如果有 #hash 則捲到對應錨點 */
 export default function ScrollToTop() {
-  const { pathname, hash } = useLocation();
+  const { pathname, search } = useLocation();
 
+  // 關掉瀏覽器的自動捲動還原（避免返回上一頁停在中間）
   useEffect(() => {
-    if (hash) {
-      const id = hash.slice(1);
-      // 先嘗試立刻捲到錨點
-      const target = document.getElementById(id);
-      if (target) {
-        target.scrollIntoView({ behavior: "smooth", block: "start" });
-        return;
-      }
-      // DOM 可能延遲出現，補一個微延遲的嘗試
-      setTimeout(() => {
-        const t2 = document.getElementById(id);
-        if (t2) t2.scrollIntoView({ behavior: "smooth", block: "start" });
-      }, 0);
-      return;
+    if ("scrollRestoration" in window.history) {
+      window.history.scrollRestoration = "manual";
+      return () => {
+        window.history.scrollRestoration = "auto";
+      };
     }
+  }, []);
 
-    // 沒有 hash ⇒ 直接回到頁面頂端
+  // 只要路由（含 query）變了就捲到最上方
+  useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "auto" });
-  }, [pathname, hash]);
+  }, [pathname, search]);
 
   return null;
 }
