@@ -1,32 +1,52 @@
-name: Deploy to GitHub Pages
+name: Deploy (build on CI → publish to gh-pages)
 
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pages-deploy
+  cancel-in-progress: true
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v4
-        with:
-          persist-credentials: false
 
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: "18"
+          node-version: 22
+          cache: npm
 
       - name: Install dependencies
         run: npm ci
 
-      - name: Build
-        run: npm run build
+      # 這一步會觸發你的 "prebuild"（若有設定）去跑 fetch-products.mjs / fetch-cases.mjs
+      # 並把 Secrets/Vars 注入給這些腳本使用
+      - name: Build (fetch from Google Sheets + Vite)
+        env:
+          SHEET_ID: ${{ secrets.SHEET_ID }}
+          PRODUCTS_GID: ${{ vars.PRODUCTS_GID }}
+          CASES_GID: ${{ vars.CASES_GID }}
+        run: |
+          npm run build
+
+      # 若你有 postbuild（清 gptengineer.js、產 404.html），就留著
+      - name: Postbuild
+        run: npm run postbuild
 
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
+          cname: www.yayiyayiyayi.com
+          user_name: github-actions[bot]
+          user_email: 41898282+github-actions[bot]@users.noreply.github.com

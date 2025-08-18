@@ -6,10 +6,7 @@
   "scripts": {
     "prebuild": "node scripts/fetch-products.mjs && node scripts/fetch-cases.mjs",
     "build": "vite build",
-    "postbuild": "node scripts/postbuild.cjs",
-    "dev": "vite",
-    "preview": "vite preview",
-    "deploy": "gh-pages -d dist --cname www.yayiyayiyayi.com -m \"build from $(git rev-parse --short HEAD)\""
+    "postbuild": "node scripts/postbuild.cjs"
   },
   "dependencies": {
     "@radix-ui/react-accordion": "^1.2.12",
