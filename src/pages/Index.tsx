@@ -2,13 +2,62 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ProductCard, Product } from "@/components/ProductCard";
-import rawProducts from "@/data/products.json";                    // ← 自動產生的真資料
+import rawProducts from "@/data/products.json";
+import rawCases from "@/data/cases.json";
 
-/* 轉成我們要的型別；不用再塞進 useState（反正不會變） */
+/** 產品資料（scripts 生成） */
 const PRODUCTS: (Product & { category: string })[] = rawProducts as any;
+/** 熱門產品取前三 */
+const FEATURED_PRODUCTS: Product[] = PRODUCTS.slice(0, 3);
 
-/* 取前 3 筆當「熱門產品」 */
-const FEATURED: Product[] = PRODUCTS.slice(0, 3);
+/** 案例資料型別（scripts/fetch-cases.mjs 生成） */
+type CaseItem = {
+  id: string;
+  doc_id?: string;
+  meta_title?: string;
+  meta_description?: string;
+  cover_image?: string; // 可能是 Google Drive 檔案 id，或完整網址
+};
+
+const CASES: CaseItem[] = (rawCases as any) ?? [];
+/** 熱門案例取前三 */
+const FEATURED_CASES: CaseItem[] = CASES.slice(0, 3);
+
+/** 將 Google Drive 檔案 id 轉為可直接顯示的圖片網址 */
+const toCoverUrl = (id?: string) => {
+  if (!id) return import.meta.env.BASE_URL + "placeholder.svg";
+  if (/^https?:\/\//i.test(id)) return id;
+  // 視窗寬度自適應的高畫質圖片
+  return `https://lh3.googleusercontent.com/d/${id}=w1200`;
+};
+
+/** 小卡片：案例 */
+function CaseCard({ item }: { item: CaseItem }) {
+  const cover = toCoverUrl(item.cover_image);
+  const title = item.meta_title || "案例分享";
+  const desc =
+    item.meta_description ||
+    "看看我們如何協助大家改造他們的空間。";
+
+  return (
+    <Link to={`/cases/${item.id}`} className="group block">
+      <div className="rounded-lg overflow-hidden border border-yayi-beige bg-white hover:shadow-md transition-shadow">
+        <div className="aspect-[4/3] bg-gray-100">
+          <img
+            src={cover}
+            alt={title}
+            loading="lazy"
+            className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.02]"
+          />
+        </div>
+        <div className="p-4">
+          <h3 className="text-lg font-medium text-yayi-brown truncate">{title}</h3>
+          <p className="text-sm text-gray-600 mt-1">{desc}</p>
+        </div>
+      </div>
+    </Link>
+  );
+}
 
 export default function Index() {
   return (
@@ -21,14 +70,12 @@ export default function Index() {
             backgroundImage: `url('${import.meta.env.BASE_URL}images/hero.jpg')`,
           }}
         >
-          <div className="absolute inset-0 bg-yayi-brown bg-opacity-30" />
+          <div className="absolute inset-0 bg-yayi-brown/30" />
         </div>
 
         <div className="container relative z-10 mx-auto px-4">
           <div className="max-w-2xl text-white">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              專業客製化系統櫃
-            </h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">專業客製化系統櫃</h1>
             <p className="text-xl mb-8">
               雅藝系統櫃為您打造完美收納空間，從設計、選材到安裝，一應俱全。
             </p>
@@ -51,35 +98,35 @@ export default function Index() {
       </section>
 
       {/* ───────────── Why Us ──────────── */}
-      <section className="py-16 bg-yayi-beige bg-opacity-30">
+      <section className="py-16 bg-yayi-beige/30">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12 text-yayi-brown">
-            為什麼選擇雅藝系統櫃
+          為什麼選擇雅藝系統櫃
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              { title: "半客製化", icon: "✓", desc: "依空間與需求推薦最合適的櫃體。" },
-              { title: "優質材料", icon: "✓", desc: "嚴選板材，兼顧美觀與耐用。" },
-              { title: "專業安裝", icon: "✓", desc: "師傅到府安裝，穩固又安心。" },
-              { title: "一年保固", icon: "✓", desc: "五金板材一年保固，放心使用。" },
-            ].map(f => (
-              <div
-                key={f.title}
-                className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
-              >
-                <div className="w-12 h-12 bg-yayi-gold rounded-full flex items-center justify-center text-white text-xl mb-4">
-                  {f.icon}
-                </div>
-                <h3 className="text-xl font-bold mb-2 text-yayi-brown">{f.title}</h3>
-                <p className="text-gray-600">{f.desc}</p>
-              </div>
-            ))}
-          </div>
+      {/* 三張卡片、置中 */}
+        <div className="mx-auto max-w-6xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        {[
+         { title: "優質材料", icon: "✓", desc: "嚴選板材，兼顧美觀與耐用。" },
+         { title: "專業安裝", icon: "✓", desc: "師傅到府安裝，穩固又安心。" },
+          { title: "一年保固", icon: "✓", desc: "五金板材一年保固，放心使用。" },
+        ].map((f) => (
+          <div
+            key={f.title}
+            className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
+          >
+            <div className="w-12 h-12 bg-yayi-gold rounded-full flex items-center justify-center text-white text-xl mb-4">
+             {f.icon}
+            </div>
+            <h3 className="text-xl font-bold mb-2 text-yayi-brown">{f.title}</h3>
+            <p className="text-gray-600">{f.desc}</p>
+         </div>
+         ))}
         </div>
-      </section>
+        </div>
+        </section>
 
-      {/* ───────────── Featured ────────── */}
+      {/* ───────────── Featured Products ────────── */}
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center mb-8">
@@ -90,8 +137,26 @@ export default function Index() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {FEATURED.map(p => (
+            {FEATURED_PRODUCTS.map((p) => (
               <ProductCard key={p.id} product={p} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ───────────── Featured Cases ────────── */}
+      <section className="py-16 bg-yayi-beige/20">
+        <div className="container mx-auto px-4">
+          <div className="flex justify-between items-center mb-8">
+            <h2 className="text-3xl font-bold text-yayi-brown">案例分享</h2>
+            <Link to="/cases" className="text-yayi-gold hover:underline font-medium">
+              查看全部
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {FEATURED_CASES.map((c) => (
+              <CaseCard key={c.id} item={c} />
             ))}
           </div>
         </div>

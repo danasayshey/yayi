@@ -46,8 +46,12 @@ const MeasuringGuide = () => {
             </ul>
             
             <div className="bg-yayi-beige bg-opacity-20 p-4 rounded-lg mb-6">
-              <p className="text-yayi-brown font-medium">注意：若您不確定如何測量，我們提供專業上門測量服務，確保數據精準無誤。</p>
-            </div>
+              <p className="text-yayi-brown font-medium leading-relaxed">
+               若您不確定如何測量，我們提供線上諮詢服務，
+              <br className="hidden sm:block" />
+               可提供預計施作空間尺寸照片詢問，確保測量數據準確無誤。
+            </p>
+        </div>
           </section>
           
           <section className="mb-12">
