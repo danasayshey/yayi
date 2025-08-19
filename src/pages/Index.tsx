@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { ProductCard, Product } from "@/components/ProductCard";
 import rawProducts from "@/data/products.json";
 import rawCases from "@/data/cases.json";
+import { toCoverUrl } from "@/lib/cover";
 
 /** 產品資料（scripts 生成） */
 const PRODUCTS: (Product & { category: string })[] = rawProducts as any;
@@ -16,28 +17,19 @@ type CaseItem = {
   doc_id?: string;
   meta_title?: string;
   meta_description?: string;
-  cover_image?: string; // 可能是 Google Drive 檔案 id，或完整網址
+  cover_image?: string; // Google Drive 檔案 id 或完整網址
 };
 
 const CASES: CaseItem[] = (rawCases as any) ?? [];
 /** 熱門案例取前三 */
 const FEATURED_CASES: CaseItem[] = CASES.slice(0, 3);
 
-/** 將 Google Drive 檔案 id 轉為可直接顯示的圖片網址 */
-const toCoverUrl = (id?: string) => {
-  if (!id) return import.meta.env.BASE_URL + "placeholder.svg";
-  if (/^https?:\/\//i.test(id)) return id;
-  // 視窗寬度自適應的高畫質圖片
-  return `https://lh3.googleusercontent.com/d/${id}=w1200`;
-};
-
 /** 小卡片：案例 */
 function CaseCard({ item }: { item: CaseItem }) {
   const cover = toCoverUrl(item.cover_image);
   const title = item.meta_title || "案例分享";
   const desc =
-    item.meta_description ||
-    "看看我們如何協助大家改造他們的空間。";
+    item.meta_description || "看看我們如何協助大家改造他們的空間。";
 
   return (
     <Link to={`/cases/${item.id}`} className="group block">
@@ -101,30 +93,30 @@ export default function Index() {
       <section className="py-16 bg-yayi-beige/30">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12 text-yayi-brown">
-          為什麼選擇雅藝系統櫃
+            為什麼選擇雅藝系統櫃
           </h2>
 
-      {/* 三張卡片、置中 */}
-        <div className="mx-auto max-w-6xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        {[
-         { title: "優質材料", icon: "✓", desc: "嚴選板材，兼顧美觀與耐用。" },
-         { title: "專業安裝", icon: "✓", desc: "師傅到府安裝，穩固又安心。" },
-          { title: "一年保固", icon: "✓", desc: "五金板材一年保固，放心使用。" },
-        ].map((f) => (
-          <div
-            key={f.title}
-            className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
-          >
-            <div className="w-12 h-12 bg-yayi-gold rounded-full flex items-center justify-center text-white text-xl mb-4">
-             {f.icon}
-            </div>
-            <h3 className="text-xl font-bold mb-2 text-yayi-brown">{f.title}</h3>
-            <p className="text-gray-600">{f.desc}</p>
-         </div>
-         ))}
+          {/* 三張卡片、置中 */}
+          <div className="mx-auto max-w-6xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              { title: "優質材料", icon: "✓", desc: "嚴選板材，兼顧美觀與耐用。" },
+              { title: "專業安裝", icon: "✓", desc: "師傅到府安裝，穩固又安心。" },
+              { title: "一年保固", icon: "✓", desc: "五金板材一年保固，放心使用。" },
+            ].map((f) => (
+              <div
+                key={f.title}
+                className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
+              >
+                <div className="w-12 h-12 bg-yayi-gold rounded-full flex items-center justify-center text-white text-xl mb-4">
+                  {f.icon}
+                </div>
+                <h3 className="text-xl font-bold mb-2 text-yayi-brown">{f.title}</h3>
+                <p className="text-gray-600">{f.desc}</p>
+              </div>
+            ))}
+          </div>
         </div>
-        </div>
-        </section>
+      </section>
 
       {/* ───────────── Featured Products ────────── */}
       <section className="py-16">
